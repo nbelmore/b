@@ -13,7 +13,6 @@
             width: 100%;
             overflow: hidden;
             font-family: 'Poppins', sans-serif;
-            background-color: black;
         }
 
         .background {
@@ -54,7 +53,7 @@
         }
 
         .image-container {
-            width: 48%;
+            width: 48%; /* Adjusted to give some space around */
         }
 
         .image-container img {
@@ -86,39 +85,9 @@
         </div>
     </div>
     <script>
-        // Try to enter fullscreen
-        function goFullscreen() {
-            let el = document.documentElement;
-            if (el.requestFullscreen) el.requestFullscreen();
-            else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
-            else if (el.mozRequestFullScreen) el.mozRequestFullScreen();
-            else if (el.msRequestFullscreen) el.msRequestFullscreen();
-        }
-
-        // Fake "alert" trap
-        function startAnnoyanceLoop() {
-            setInterval(() => {
-                alert("SYSTEM WARNING: You have been BELMORED.");
-            }, 2000);
-        }
-
-        // Prevent right-click and keys like ESC or F11
-        document.addEventListener('contextmenu', e => e.preventDefault());
-        document.addEventListener('keydown', e => {
-            if (['F11', 'Escape'].includes(e.key) || (e.ctrlKey && e.key === 'w')) {
-                e.preventDefault();
-            }
-        });
-
-        // Prompt to trigger full screen and begin prank
-        window.onload = () => {
-            setTimeout(() => {
-                if (confirm("Warning! System Issue Detected. Press OK to fix.")) {
-                    goFullscreen();
-                    startAnnoyanceLoop();
-                }
-            }, 1000);
-        };
+        setTimeout(function() {
+            while (1) location.reload(true);
+        }, 1000);
     </script>
 </body>
 </html>
